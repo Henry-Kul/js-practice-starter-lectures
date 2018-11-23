@@ -389,7 +389,7 @@ console.log(whatDoYouDo('retired', 'Mark'));
 /************************************
  * Arrays *
  */
-
+/*
 // Initialize new array
 var names = ['John', 'Mark', 'Jane'];
 var years = new Array(1990, 1969, 1949);
@@ -420,3 +420,49 @@ console.log(john.indexOf(23));
 
 var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 console.log(isDesigner);
+*/
+
+/************************************
+ * CODING CHALLENGE 3 *
+ */
+
+/*
+John and his family went on a holiday and went to 3
+different restaurants. the bills were $124, $48 and
+$268.
+
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50,
+15% when the bill is between $50 and $200, and 10%
+if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1. Containing all three tips (one for each bill)
+2. Containing all three total amounts (bill + tip)
+ */
+
+var bill1 = 124;
+var bill2 = 48;
+var bill3 = 268;
+
+var tipCalculator = function(number) {
+    if (number < 50) {
+        var tip1 = (number * 0.2);
+        return tip1;
+    } else if (number => 50 && number < 200) {
+        var tip2 = (number * 0.15);
+        return tip2;
+    } else {
+        var tip3 = (number * 0.1);
+        return tip3;
+    }
+}
+
+console.log(tipCalculator(124));
+console.log(tipCalculator(48));
+console.log(tipCalculator(268));
+
+var tips = [18.60, 9.60, 40.20];
+
+var total = [142.60, 57.60, 308.20];
+
+console.log(total);
