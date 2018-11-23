@@ -249,7 +249,7 @@ switch (true) {
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy values
 
-var height;
+/*var height;
 
 height = 23;
 
@@ -262,4 +262,63 @@ if (height || height === 0) {
 // Equality operators
 if (height == '23') {
     console.log('The == operators does type coercion!');
+} */
+
+/************************************
+ * CODING CHALLENGE 2 *
+ */
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games,
+John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94
+and 123 points.
+
+1. Calculate the average score for each team
+2. Decide which team wins in average (highest average score),
+and print the winner to the console. Also include the average
+score in the output.
+3. Then change the scores to show different winners. Don't forget
+to take into account there might be a draw (the same average score).
+
+4. EXTRA: Veronica also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && ope
+rator to make the decision. If you can't solve this one, just watch the solution,
+it's no problem :)
+5. Like before, change the scores to generate different winners,
+keeping in mind there might be draws.
+*/
+
+//John's team scores
+var JTGame1 = 89;
+var JTGame2 = 120;
+var JTGame3 = 103;
+
+var teamJTAverage = (JTGame1 + JTGame2 + JTGame3) / 3;
+
+//Mark's team scores
+var MTGame1 = 116;
+var MTGame2 = 94;
+var MTGame3 = 123;
+
+var teamMTAverage = (MTGame1 + MTGame2 + MTGame3) / 3;
+
+// Veronica's team scores
+var VTGame1 = 97;
+var VTGame2 = 134;
+var VTGame3 = 105;
+
+var teamVTAverage = (VTGame1 + VTGame2 + VTGame3) / 3;
+
+switch (true) {
+    case teamJTAverage > teamMTAverage && teamJTAverage > teamVTAverage:
+        console.log('John\'s team Wins! ' + teamJTAverage + ' points');
+        break;
+    case teamMTAverage > teamJTAverage && teamMTAverage > teamVTAverage:
+        console.log('Mark\'s team Wins! ' + teamMTAverage + ' points');
+        break;
+    case teamMTAverage === teamJTAverage && teamMTAverage === teamVTAverage && teamJTAverage === teamVTAverage:
+        console.log('Match is a draw!');
+        break;
+    case teamVTAverage > teamJTAverage && teamVTAverage > teamMTAverage:
+        console.log('Veronica\'s team Wins! ' + teamVTAverage + ' points');
+        break;
 }
