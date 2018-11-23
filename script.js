@@ -135,4 +135,4 @@ var massJohn = 95; // kg
 var heightJohn = 1.91; // meters
 var bmiJohn = massJohn / (heightJohn * heightJohn);
 
-console.log(' Is Mark/s BMI higher than John/s? ' + (bmiMark > bmiJohn));
+console.log(' Is Mark\'s BMI higher than John\'s? ' + (bmiMark > bmiJohn));
