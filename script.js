@@ -439,7 +439,7 @@ In the end, John would like to have 2 arrays:
 1. Containing all three tips (one for each bill)
 2. Containing all three total amounts (bill + tip)
  */
-
+/*
 var bill1 = 124;
 var bill2 = 48;
 var bill3 = 268;
@@ -466,3 +466,37 @@ var tips = [18.60, 9.60, 40.20];
 var total = [142.60, 57.60, 308.20];
 
 console.log(total);
+*/
+
+/************************************
+ * Objects and properties *
+ */
+
+
+// Object literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+
+// new Object syntax
+var jane = new Object();
+jane.firstname = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+
+console.log(jane);
